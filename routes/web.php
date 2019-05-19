@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// da wir nur vue routes nutzen, wird eine neue geladene Seite mit korrektem Link
+// einen 404 verursachen. Um das zu verhindern, fuegen wir hier eine "Blanko"-Seite
+// zu, die immer auf Index steuert fuer alle Seiten, spezifiziert ueber RegEx
+// auf Index greift Vue zu 
+Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?');

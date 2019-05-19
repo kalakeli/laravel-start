@@ -9,7 +9,12 @@
 // Admin-LTE
 @import '~admin-lte/dist/css/adminlte';
 // font-awesome
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
+
+.router-link-exact-active {
+  background-color: #2196f3;
+  color: #fff !important;
+}
